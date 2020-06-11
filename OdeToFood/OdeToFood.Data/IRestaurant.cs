@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace OdeToFood.Data
 {
-    interface IRestaurant
+    public interface IRestaurant
     {
         IEnumerable<Restaurant> GetAll();
     }
@@ -21,9 +21,9 @@ namespace OdeToFood.Data
         {
             restaurants = new List<Restaurant>()
             {
-                new Restaurant {Id = 1, Name = "Scott's Pizza", Cuisine = CuisineType.Italian, Description = "A mighty pizzaria"},
-                new Restaurant {Id = 2, Name = "Cinnamon Club", Cuisine = CuisineType.Mexican, Description = "A spicy dessert?..."},
-                new Restaurant {Id = 3, Name = "Raj's", Cuisine = CuisineType.Indian, Description = "Curry to make your head explode"}
+                new Restaurant {Id = 1, Name = "Scott's Pizza", Location = "Maryland", Cuisine = CuisineType.Italian, Description = "A mighty pizzaria"},
+                new Restaurant {Id = 2, Name = "Cinnamon Club", Location = "Sydney", Cuisine = CuisineType.Mexican, Description = "A spicy dessert?..."},
+                new Restaurant {Id = 3, Name = "Raj's", Location = "London", Cuisine = CuisineType.Indian, Description = "Curry to make your head explode"}
             };
         }
 
@@ -33,8 +33,6 @@ namespace OdeToFood.Data
             return from r in restaurants
                    orderby r.Name
                    select r;
-            
-
         }
     }
 
