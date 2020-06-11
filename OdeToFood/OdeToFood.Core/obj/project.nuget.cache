@@ -1,10 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BHNRL2hQRabeTnhKC9na37YNPlKJIsLqZ2+B7KFeGhmjnXRy9gnIRzzOyKE6V9bp5o9Y0XKIqGwNcmxklyD4ug==",
+  "dgSpecHash": "KtLOVPUg2WCO52akcAAVuYNN7H01FifWeN3YGqrWcEH8bGVYv+/xbe0uy9Y4vi6c4fPhtr61TfqkdL6aQQorvA==",
   "success": true,
   "projectFilePath": "C:\\GitHub\\OdeToFood\\OdeToFood\\OdeToFood.Core\\OdeToFood.Core.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\JoshCrossley\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }

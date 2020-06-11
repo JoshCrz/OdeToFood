@@ -3,18 +3,22 @@ using System.Collections.Generic;
 using System.Text;
 using OdeToFood.Core;
 using System.Linq;
+using Microsoft.VisualBasic.CompilerServices;
 
 namespace OdeToFood.Data
 {
     public interface IRestaurant
     {
-        IEnumerable<Restaurant> GetAll();
+        //IEnumerable<Restaurant> GetAll();
+
+        //this function superseeds the one above
+        IEnumerable<Restaurant> GetRestaurantsByName(string name);
+
     }
 
     //in memory data class
     public class InMemoryRestaurantData : IRestaurant
     {
-
         List<Restaurant> restaurants;
 
         public InMemoryRestaurantData()
@@ -27,13 +31,26 @@ namespace OdeToFood.Data
             };
         }
 
+        /*
         public IEnumerable<Restaurant> GetAll()
         {
             //linq query
             return from r in restaurants
                    orderby r.Name
                    select r;
+        }*/
+
+
+        //optional parameter by specifying name = null
+        public IEnumerable<Restaurant> GetRestaurantsByName(string name = null)
+        {
+            //linq query
+            return from r in restaurants
+                   where string.IsNullOrEmpty(name) || r.Name.StartsWith(name)
+                   orderby r.Name
+                   select r;
         }
+
     }
 
 }
