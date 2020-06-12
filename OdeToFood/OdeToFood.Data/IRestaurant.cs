@@ -14,6 +14,8 @@ namespace OdeToFood.Data
         //this function superseeds the one above
         IEnumerable<Restaurant> GetRestaurantsByName(string name);
 
+        Restaurant GetById(int id);
+
     }
 
     //in memory data class
@@ -49,6 +51,12 @@ namespace OdeToFood.Data
                    where string.IsNullOrEmpty(name) || r.Name.StartsWith(name)
                    orderby r.Name
                    select r;
+        }
+
+        public Restaurant GetById(int id)
+        {
+            //return single match, or return null
+            return restaurants.SingleOrDefault(r => r.Id == id);
         }
 
     }
