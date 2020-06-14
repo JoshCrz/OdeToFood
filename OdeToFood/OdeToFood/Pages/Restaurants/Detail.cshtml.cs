@@ -16,6 +16,9 @@ namespace OdeToFood.Pages.Restaurants
 
         private readonly IRestaurant RestaurantData;
 
+        [TempData]
+        public string Message { get; set; }
+
         public DetailModel(IRestaurant restaurantData)
         {
             //bind the interface to a field definition
@@ -24,12 +27,23 @@ namespace OdeToFood.Pages.Restaurants
         }
 
 
-        public void OnGet(int id)
+        //return type IActionResult
+        //OnGet is an action
+        public IActionResult OnGet(int id)
         {
             
             this.Restaurant = this.RestaurantData.GetById(id);
 
             //validation
+            if (this.Restaurant != null)
+            {
+                return Page();
+            } else
+            {
+                return RedirectToPage("./NotFound");
+            }
+
+            
         }
     }
 }

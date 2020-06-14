@@ -5,6 +5,8 @@
 }
 
 <h2>@Model.Restaurant.Name</h2>
+
+
 <div>
     Id: @Model.Restaurant.Id
 </div>
@@ -15,6 +17,12 @@
     Cuisine: @Model.Restaurant.Cuisine
 </div>
 
+if(Model.Message != null){
+<div class="alert alert-info">
+    @Model.Message
+</div>
+}
 
-<a asp-page="./List" class="btn btn-default">All Restaurants</a>
+
+<a asp-page="./List" class="btn btn-info">See All Restaurants</a>
 

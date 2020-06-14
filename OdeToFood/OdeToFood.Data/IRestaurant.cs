@@ -4,6 +4,7 @@ using System.Text;
 using OdeToFood.Core;
 using System.Linq;
 using Microsoft.VisualBasic.CompilerServices;
+using System.Data;
 
 namespace OdeToFood.Data
 {
@@ -16,11 +17,18 @@ namespace OdeToFood.Data
 
         Restaurant GetById(int id);
 
+        Restaurant Update(Restaurant restaurantToUpdate);
+
+        Restaurant Add(Restaurant newRestaurant);
+
+        int Commit();
+
     }
 
     //in memory data class
     public class InMemoryRestaurantData : IRestaurant
     {
+
         List<Restaurant> restaurants;
 
         public InMemoryRestaurantData()
@@ -57,6 +65,33 @@ namespace OdeToFood.Data
         {
             //return single match, or return null
             return restaurants.SingleOrDefault(r => r.Id == id);
+        }
+
+        public Restaurant Add(Restaurant newRestaurant)
+        {
+            restaurants.Add(newRestaurant);
+
+            //only for test, wouldnt do this in prod
+            newRestaurant.Id = restaurants.Max(r => r.Id) + 1;
+            return newRestaurant;
+        }
+
+        public Restaurant Update(Restaurant updatedRestaurant)
+        {
+            var restaurant = restaurants.SingleOrDefault<Restaurant>(r => r.Id == updatedRestaurant.Id);
+            if(restaurant != null)
+            {
+                restaurant.Name = updatedRestaurant.Name;
+                restaurant.Location = updatedRestaurant.Location;
+                restaurant.Cuisine = updatedRestaurant.Cuisine;
+            }
+
+            return restaurant;
+        }
+
+        public int Commit()
+        {
+            return 0;
         }
 
     }
