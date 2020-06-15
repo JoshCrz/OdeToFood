@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KtLOVPUg2WCO52akcAAVuYNN7H01FifWeN3YGqrWcEH8bGVYv+/xbe0uy9Y4vi6c4fPhtr61TfqkdL6aQQorvA==",
+  "dgSpecHash": "7vYPr/jI7FZIDntn0P9AoH6dhS42imneJAZwPk9QfrczuTCsUW00TzcQ3jDS8fOZ7r57XuhCnecmHEgaFEV7hA==",
   "success": true,
-  "projectFilePath": "C:\\GitHub\\OdeToFood\\OdeToFood\\OdeToFood.Core\\OdeToFood.Core.csproj",
+  "projectFilePath": "C:\\github\\odetofood\\odetofood\\OdeToFood.Core\\OdeToFood.Core.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
