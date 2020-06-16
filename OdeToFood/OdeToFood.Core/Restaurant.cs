@@ -17,5 +17,7 @@ namespace OdeToFood.Core
         public string Description { get; set; }
         public CuisineType Cuisine { get; set; }
 
+        public string Owner { get; set; }
+
     }
 }
