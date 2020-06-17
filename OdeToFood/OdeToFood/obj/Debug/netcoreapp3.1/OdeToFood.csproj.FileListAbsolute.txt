@@ -149,3 +149,4 @@ C:\GitHub\OdeToFood\OdeToFood\OdeToFood\obj\Debug\netcoreapp3.1\staticwebassets\
 C:\GitHub\OdeToFood\OdeToFood\OdeToFood\obj\Debug\netcoreapp3.1\OdeToFood.dll
 C:\GitHub\OdeToFood\OdeToFood\OdeToFood\obj\Debug\netcoreapp3.1\OdeToFood.pdb
 C:\GitHub\OdeToFood\OdeToFood\OdeToFood\obj\Debug\netcoreapp3.1\OdeToFood.genruntimeconfig.cache
+C:\GitHub\OdeToFood\OdeToFood\OdeToFood\obj\Debug\netcoreapp3.1\Razor\Pages\Restaurants\Delete.cshtml.g.cs

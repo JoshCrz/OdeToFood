@@ -38,6 +38,10 @@
                asp-page="./Edit" asp-route-id="@restaurant.Id">
                 Edit
             </a>
+            <a class="btn btn-sm btn-info"
+               asp-page="./Delete" asp-route-id="@restaurant.Id">
+                Delete
+            </a>
         </td>
 
     </tr>
@@ -49,4 +53,6 @@
     Add New
 </a>
 
-<div>@Model.Message</div>
+@section footer {
+    <div>@Model.Message</div>
+}

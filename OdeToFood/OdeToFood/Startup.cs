@@ -27,15 +27,15 @@ namespace OdeToFood
         {
 
             //this enables us to use the dbcontext as a constructor param accross the app
-            services.AddDbContextPool<OdeToFoodDbContext>(options =>
+            /*services.AddDbContextPool<OdeToFoodDbContext>(options =>
             {
                 options.UseSqlServer(Configuration.GetConnectionString("OdeToFoodDb"));
-            });
+            });*/
 
-            services.AddScoped<IRestaurant, SqlRestaurantData>();
+            //services.AddScoped<IRestaurant, SqlRestaurantData>();
 
             //in memory data
-            //services.AddSingleton<IRestaurant, InMemoryRestaurantData>();
+            services.AddSingleton<IRestaurant, InMemoryRestaurantData>();
 
             services.AddRazorPages();
         }
