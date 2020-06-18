@@ -37,15 +37,22 @@
             @RenderBody()
             <hr />
             <footer class="border-top footer text-muted">
+                <vc:restaurant-count></vc:restaurant-count>
                 @RenderSection("footer", required: false)
                 <p>&copy; 2020 - OdeToFood - <a asp-area="" asp-page="/Privacy">Privacy</a></p>
             </footer>
         </main>
     </div>
 
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+    <environment include="Development">
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+    </environment>
+    <environment exclude="Development">
+
+    </environment>
+
 
     @RenderSection("Scripts", required: false)
 </body>

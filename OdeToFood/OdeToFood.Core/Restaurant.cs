@@ -19,5 +19,10 @@ namespace OdeToFood.Core
 
         public string Owner { get; set; }
 
+        public Restaurant()
+        {
+                
+        }
+
     }
 }
